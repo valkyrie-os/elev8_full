@@ -11,7 +11,7 @@ app = FastAPI()
 
 def analyze_user_messages(messages, user_to_analyze, cohere_api_key):
     """Analyze messages from a specific user using Cohere API"""
-    co = cohere.Client('VkRfL2rl1Swi3YJF8W52J6Rxz4ZJDC0aFoQk68r6')
+    co = cohere.Client(cohere_api_key)
     
     # Filter messages for specific user
     user_messages = [msg for msg in messages if msg['user'] == user_to_analyze]
