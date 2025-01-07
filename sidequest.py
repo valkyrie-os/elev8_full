@@ -27,7 +27,7 @@ class DataType(Enum):
 @dataclass
 class DataSpecialistAgent:
     conversation_history: List[Message] = field(default_factory=list)
-    client: OpenAI = field(default_factory=lambda: OpenAI(api_key="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"))
+    client: OpenAI = field(default_factory=lambda: OpenAI(api_key="openai_api_key"))
 
     def analyze_data(self, data: Dict[str, List[Any]]) -> Dict[str, Any]:
         try:
